@@ -1,0 +1,85 @@
+<!--if normally run-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UICatalog Suite" verbose="1" parallel="false">
+    <listeners>
+        <listener class-name="org.uicatlog.utils.RetryListener"/>
+    </listeners>
+
+    <test name="UICatalog Tests">
+        <classes>
+            <class name="org.uicatlog.tests.ButtonsTest"/>
+            <class name="org.uicatlog.tests.AlertsTest"/>
+            <class name="org.uicatlog.tests.TextFieldsTest"/>
+            <class name="org.uicatlog.tests.SlidersTest"/>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+
+<!--if run one Semulator-->
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="iPhone 16 Pro Suite" verbose="1" parallel="false">-->
+<!--    <listeners>-->
+<!--        <listener class-name="org.uicatlog.utils.RetryListener"/>-->
+<!--    </listeners>-->
+<!--    <test name="iPhone 16 Pro Tests">-->
+<!--        <parameter name="udid" value="73628E37-F248-4CD8-960F-ED77B6101F82"/>-->
+<!--        <parameter name="port" value="4723"/>-->
+<!--        <classes>-->
+<!--            <class name="org.uicatlog.tests.ButtonsTest"/>-->
+<!--            <class name="org.uicatlog.tests.AlertsTest"/>-->
+<!--            <class name="org.uicatlog.tests.TextFieldsTest"/>-->
+<!--            <class name="org.uicatlog.tests.SlidersTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+
+
+
+
+<!--if run multiple Semulator-->
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="UICatalog Suite" parallel="tests" thread-count="3">-->
+<!--    <listeners>-->
+<!--        <listener class-name="org.uicatlog.utils.RetryListener"/>-->
+<!--    </listeners>-->
+
+<!--    <test name="Test - iPhone 16 Pro">-->
+<!--        <parameter name="udid" value="73628E37-F248-4CD8-960F-ED77B6101F82"/>-->
+<!--        <parameter name="deviceName" value="iPhone 16 Pro"/>-->
+<!--        <parameter name="platformVersion" value="18.5"/>-->
+<!--        <parameter name="appPath" value="/Users/ndewanshu/Desktop/ipaFiles/ios-uicatalog/UICatalog/build/Build/Products/Debug-iphonesimulator/UICatalog.app"/>-->
+<!--        <parameter name="appiumServerPort" value="4723"/>-->
+<!--        <classes>-->
+<!--            <class name="org.uicatlog.tests.ButtonsTest"/>-->
+<!--            <class name="org.uicatlog.tests.AlertsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Test - iPhone 16e">-->
+<!--        <parameter name="udid" value="7C4B4E6A-1D92-474B-811A-A8C391338D61"/>-->
+<!--        <parameter name="deviceName" value="iPhone 16e"/>-->
+<!--        <parameter name="platformVersion" value="18.5"/>-->
+<!--        <parameter name="appPath" value="/Users/ndewanshu/Desktop/ipaFiles/ios-uicatalog/UICatalog/build/Build/Products/Debug-iphonesimulator/UICatalog.app"/>-->
+<!--        <parameter name="appiumServerPort" value="4725"/>-->
+<!--        <classes>-->
+<!--            <class name="org.uicatlog.tests.TextFieldsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Test - iPhone 16">-->
+<!--        <parameter name="udid" value="807DBCF9-29CB-4C00-ADF1-5EB0F81A0E8C"/>-->
+<!--        <parameter name="deviceName" value="iPhone 16"/>-->
+<!--        <parameter name="platformVersion" value="18.5"/>-->
+<!--        <parameter name="appPath" value="/Users/ndewanshu/Desktop/ipaFiles/ios-uicatalog/UICatalog/build/Build/Products/Debug-iphonesimulator/UICatalog.app"/>-->
+<!--        <parameter name="appiumServerPort" value="4727"/>-->
+<!--        <classes>-->
+<!--            <class name="org.uicatlog.tests.SlidersTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
