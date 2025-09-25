@@ -195,18 +195,25 @@ public class BaseTest {
         XCUITestOptions options = new XCUITestOptions()
                 .setPlatformName("iOS")
                 .setAutomationName("XCUITest")
-                .setUdid("47633498-69A3-4C11-922A-084186084D0F")
-                .setPlatformVersion("18.5")
-                .setDeviceName("iPhone 16 Plus")
+                .setUdid("7184F681-284E-4AD7-B2D6-284C48BDC5A7")
+                .setPlatformVersion("26")
+                .setDeviceName("iPhone 17 Pro Max")
                 // .setApp("/Users/dewanshun/Desktop/UICatalogIOS/app/UIKitCatalog.app.zip")
-                .setApp(System.getProperty("user.dir") + "/app/UIKitCatalog.app.zip")
+                // .setApp(System.getProperty("user.dir") + "/app/UIKitCatalog.app.zip")
+                // .setApp("/Users/qadew/Desktop/UICatalogIOS/app/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.zip")
+                // .setApp(System.getProperty("user.dir") + "/app/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.zip")
+
+
+                // .setBundleId("com.apple.news")
+                 .setBundleId("com.saucelabs.SwagLabsMobileApp")
+
                 .setIncludeSafariInWebviews(true)
                 .setNewCommandTimeout(java.time.Duration.ofSeconds(3600))
                 .setConnectHardwareKeyboard(true);
 
         driver = new IOSDriver(getUrl(), options);
         System.out.println("✅ iOS Driver started successfully.");
-        System.out.println("Driver is null? " + false);
+        // System.out.println("Driver is null? " + false);
     }
 
     @AfterClass
