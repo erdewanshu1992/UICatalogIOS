@@ -1,0 +1,37 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java / Gradle / Maven
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+target/
+build/
+.gradle/
+out/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+logs/
+*.log
+*.out
+*.pid
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Coverage / Reports
+coverage/
+*.lcov
+
+# MacOS
+.AppleDouble
+.LSOverride

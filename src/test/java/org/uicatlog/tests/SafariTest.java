@@ -3,9 +3,9 @@ package org.uicatlog.tests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseForWebTest;
+import org.uicatlog.base.BaseForWebMiOSTest;
 
-public class SafariTest extends BaseForWebTest {
+public class SafariTest extends BaseForWebMiOSTest {
 
     @BeforeSuite
     public void setUpSuite() {

@@ -1,15 +1,12 @@
 package org.uicatlog.tests;
 
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.ios.IOSDriver;
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.pages.SlidersPage;
 import org.uicatlog.utils.RetryAnalyzer;
 
-public class SlidersTest extends BaseTest {
+public class SlidersTest extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testSetSlider() throws InterruptedException {

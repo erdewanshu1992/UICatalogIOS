@@ -1,14 +1,13 @@
 package org.uicatlog.tests;
 
 import io.appium.java_client.AppiumBy;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.pages.AlertsPage;
 import org.uicatlog.utils.RetryAnalyzer;
 
 
-public class AlertsTest extends BaseTest {
+public class AlertsTest extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testShowAndAcceptAlert() throws InterruptedException {

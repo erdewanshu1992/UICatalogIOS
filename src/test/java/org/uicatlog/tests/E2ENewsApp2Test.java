@@ -5,16 +5,15 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.utils.RetryAnalyzer;
 import org.uicatlog.utils.SwipeStaticUtils;
-import org.uicatlog.utils.swipeConstructorUpNTimes;
 
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-public class E2ENewsApp2Test extends BaseTest {
+public class E2ENewsApp2Test extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testShowAndAcceptAlert() throws InterruptedException {
@@ -92,7 +91,7 @@ public class E2ENewsApp2Test extends BaseTest {
 //         swipeConstructorUpNTimes(5);
 
 
-        SwipeStaticUtils.swipeUpNTimes(driver, 5);
+        SwipeStaticUtils.swipeUpNTimesUp(driver, 5);
 
         // OR
 //        swipeConstructorUpNTimes swipeStaticUtils = new swipeConstructorUpNTimes(driver);

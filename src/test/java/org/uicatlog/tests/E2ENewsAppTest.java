@@ -5,7 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.utils.RetryAnalyzer;
 import org.uicatlog.utils.SwipeStaticUtils;
 import org.uicatlog.utils.SwipeUntil2ElementVisible;
@@ -15,7 +15,7 @@ import java.time.Duration;
 import java.util.HashMap;
 
 
-public class E2ENewsAppTest extends BaseTest {
+public class E2ENewsAppTest extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testShowAndAcceptAlert() throws InterruptedException {
@@ -55,7 +55,7 @@ public class E2ENewsAppTest extends BaseTest {
 
         System.out.println("✅ Test complete!" + " " + popUps.getText());
 
-        SwipeStaticUtils.swipeUpNTimes(driver, 3);
+        SwipeStaticUtils.swipeUpNTimesUp(driver, 3);
 
         // driver.navigate().back();
         SwipeUntil2ElementVisible util = new SwipeUntil2ElementVisible(driver);

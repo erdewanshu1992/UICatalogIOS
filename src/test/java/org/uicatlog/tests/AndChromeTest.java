@@ -3,9 +3,9 @@ package org.uicatlog.tests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseForWebAndTest;
+import org.uicatlog.base.BaseForWebAndroidTest;
 
-public class AndChromeTest extends BaseForWebAndTest {
+public class AndChromeTest extends BaseForWebAndroidTest {
 
     @BeforeSuite
     public void setUpSuite() {

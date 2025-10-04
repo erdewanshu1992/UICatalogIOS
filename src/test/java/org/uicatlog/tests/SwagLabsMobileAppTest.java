@@ -1,19 +1,32 @@
 package org.uicatlog.tests;
 
 import io.appium.java_client.AppiumBy;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.utils.*;
 
 
-public class SwagLabsMobileAppTest extends BaseTest {
+public class SwagLabsMobileAppTest extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testAllTheFeature() throws InterruptedException {
 
         driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Username'")).sendKeys("standard_user");
         driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Password'")).sendKeys("secret_sauce");
-        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'LOGIN'")).click();
+        // driver.findElement(AppiumBy.iOSNsPredicateString("name == 'LOGIN'")).click();
+
+        WebElement chai = driver.findElement(AppiumBy.iOSNsPredicateString("name == \"test-LOGIN\""));
+
+        // Call your gesture methods
+         SwipeStaticUtils.tapGesture(driver, 208, 319); // coordinate-based way
+
+        // SwipeStaticUtils.tapGesture(driver, chai); // single tap -- nhi chal rha
+
+        // SwipeStaticUtils.longPressGestureTouchAndHold(driver, chai, 2.0); // long press for 2 seconds
+        // SwipeStaticUtils.tapGestureCoordinateBased(driver, chai); // OR coordinate-based way
+        // SwipeStaticUtils.doubleTapGesture(driver, chai);    // double tap
+        // SwipeStaticUtils.textScrollUntilElementVisible(driver); // scroll until "Chai"
 
 
 
@@ -22,18 +35,23 @@ public class SwagLabsMobileAppTest extends BaseTest {
          driver.findElement(AppiumBy.iOSNsPredicateString("label == 'Sauce Labs Backpack'")).click();
          driver.findElement(AppiumBy.iOSNsPredicateString("name == 'test-ADD TO CART'")).click();
 
-         SwipeStaticUtils.swipeUpNTimes(driver, 2);
+         SwipeStaticUtils.swipeUpNTimesUp(driver, 2);
+         SwipeStaticUtils.swipeUpNTimesDown(driver, 2);
 
         driver.findElement(AppiumBy.accessibilityId("test-BACK TO PRODUCTS")).click();
 
-        SwipeStaticUtils.swipeUpNTimes(driver, 3);
+        SwipeStaticUtils.swipeUpNTimesUp(driver, 3);
+        SwipeStaticUtils.swipeUpNTimesDown(driver, 3);
 
         driver.findElement(AppiumBy.iOSNsPredicateString("name == \"test-Toggle\"")).click();
         Thread.sleep(2000);
-        SwipeStaticUtils.swipeUpNTimes(driver, 2);
+        SwipeStaticUtils.swipeUpNTimesUp(driver, 2);
+        SwipeStaticUtils.swipeUpNTimesDown(driver, 2);
+
         driver.findElement(AppiumBy.iOSNsPredicateString("name == \"test-Toggle\"")).click();
 
-        SwipeStaticUtils.swipeUpNTimes(driver, 3);
+        SwipeStaticUtils.swipeUpNTimesUp(driver, 3);
+        SwipeStaticUtils.swipeUpNTimesDown(driver, 3);
 
 
         TouchHelper touchHelper = new TouchHelper(driver);

@@ -2,11 +2,11 @@ package org.uicatlog.tests;
 
 import io.appium.java_client.AppiumBy;
 import org.testng.annotations.Test;
-import org.uicatlog.base.BaseTest;
+import org.uicatlog.base.BaseIOSTest;
 import org.uicatlog.pages.TextFieldsPage;
 import org.uicatlog.utils.RetryAnalyzer;
 
-public class TextFieldsTest extends BaseTest {
+public class TextFieldsTest extends BaseIOSTest {
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testEnterText() throws InterruptedException {
